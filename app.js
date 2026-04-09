@@ -1,4 +1,6 @@
-const API_KEY = '4b93ffd6f864e8fcce4f83fb557d320b'
+import {ENV} from "./config";
+
+const API_KEY = ENV.WEATHER_API_KEY
 const BASE_URL = 'https://api.openweathermap.org/data/2.5/weather'
 
 const cityInput = document.getElementById('cityInput')
