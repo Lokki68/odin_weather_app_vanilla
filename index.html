@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App Vanilla</title>
+  <link rel='stylesheet'
+        href='styles.css'
+  >
+
+</head>
+<body>
+  <div class='container'>
+    <h1> ⛅ <span>Weather</span> App Vanilla</h1>
+    <div class='search-bar'>
+      <input type='text'
+             name='cityInput'
+             id='cityInput'
+             placeholder='Entrez une ville ...'
+             autocomplete='off'
+      >
+      <button id='searchBtn' title='Rechercher'>🔎</button>
+    </div>
+    <button id='geoBtn' class='geo-btn'>
+      🚩 Utiliser ma position
+    </button>
+
+    <div class='loader' id='loader' >Chargement ...</div>
+    <div class='error-msg' id='errorMsg' >
+      <span>😕</span>
+      <p id='errorText'>Ville introuvable. Verifiez l'orthographe.</p>
+    </div>
+
+    <div class='weather-card' id='weatherCard'>
+      <div class='city-header'>
+        <div>
+          <div class='city-name' id='cityName'>_</div>
+          <div class='city-country' id='cityCountry'>_</div>
+        </div>
+        <div id='dateTime' class='date-time'>_</div>
+      </div>
+
+      <div class='main-weather'>
+        <div class='weather-icon' id='weatherIcon'>🌤</div>
+        <div class='temp-info'>
+          <div id='temperature' class='temperature'>_°C</div>
+          <div id='feelsLike' class='feels-like'>Ressenti: _°C</div>
+        </div>
+      </div>
+
+      <div id='description' class='description'>_</div>
+
+      <div class="min-max">
+        <div class="min-max-item">
+          <span>🔻</span> <span id="tempMin">—°C</span>
+        </div>
+        <div class="min-max-item">
+          <span>🔺</span> <span id="tempMax">—°C</span>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="stats-grid">
+        <div class="stat-card">
+          <span class="stat-icon">💧</span>
+          <div>
+            <div class="stat-label">Humidité</div>
+            <div class="stat-value" id="humidity">—</div>
+          </div>
+        </div>
+        <div class="stat-card">
+          <span class="stat-icon">🌬️</span>
+          <div>
+            <div class="stat-label">Vent</div>
+            <div class="stat-value" id="wind">—</div>
+          </div>
+        </div>
+        <div class="stat-card">
+          <span class="stat-icon">👁️</span>
+          <div>
+            <div class="stat-label">Visibilité</div>
+            <div class="stat-value" id="visibility">—</div>
+          </div>
+        </div>
+        <div class="stat-card">
+          <span class="stat-icon">🧭</span>
+          <div>
+            <div class="stat-label">Pression</div>
+            <div class="stat-value" id="pressure">—</div>
+          </div>
+        </div>
+      </div>
+
+      <div class='divider'></div>
+
+      <div class="sun-times">
+        <div class="sun-item">
+          <span class="sun-icon">🌅</span>
+          <div class="sun-label">Lever</div>
+          <div class="sun-time" id="sunrise">—</div>
+        </div>
+        <div class="sun-item">
+          <span class="sun-icon">🌇</span>
+          <div class="sun-label">Coucher</div>
+          <div class="sun-time" id="sunset">—</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src='app.js'></script >
+</body>
+</html>
